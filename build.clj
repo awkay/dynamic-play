@@ -4,9 +4,9 @@
   {:output-dir    "resources/public/js/demos"
    :asset-path    "js/demos"
    :modules       {:entry-point {:output-to "resources/public/js/demos/demos.js"
-                                 :entries   '#{recipes.dynamic-ui-routing}}
-                   :main        {:output-to "resources/public/js/demos/main-ui.js"
-                                 :entries   '#{recipes.dynamic-ui-main}}}
+                                 :entries   '#{app.main}}
+                   :mod        {:output-to "resources/public/js/demos/main-ui.js"
+                                 :entries   '#{app.mod}}}
    :verbose       true
-   :optimizations :none})
+   :optimizations :advanced})
 
