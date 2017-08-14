@@ -3,6 +3,7 @@
             [om.dom :as dom]
             [fulcro.client.core :as fc :refer [InitialAppState initial-state]]
             [om.next :as om :refer [defui]]
+            [recipes.dynamic-ui-main]
             [cljs.loader :as loader]))
 
 
@@ -57,8 +58,9 @@
   ; Let the dynamic router know that two of the routes are already loaded.
   (om/transact! reconciler `[(r/install-route {:target-kw :new-user :component ~NewUser})
                              (r/install-route {:target-kw :login :component ~Login})
+                             (r/install-route {:target-kw :main :component ~recipes.dynamic-ui-main.Main})
                              (r/route-to {:handler :login})])
-  (loader/set-loaded! :entry-point)
+  #_(loader/set-loaded! :entry-point)
   #_(repl/connect "http://localhost:9000/repl"))
 
 (fc/mount (fc/new-fulcro-client :started-callback application-loaded) Root "app")

@@ -21,5 +21,5 @@
       (dom/div #js {:style #js {:backgroundColor "red"}}
         label))))
 
-(defmethod r/get-dynamic-router-target :main [k] Main)
-(cljs.loader/set-loaded! :main)
+;(defmethod r/get-dynamic-router-target :main [k] Main)
+;(cljs.loader/set-loaded! :main)
