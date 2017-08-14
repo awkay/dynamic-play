@@ -8,5 +8,5 @@
                    :main        {:output-to "resources/public/js/demos/main-ui.js"
                                  :entries   '#{recipes.dynamic-ui-main}}}
    :verbose       true
-   :optimizations :none})
+   :optimizations :advanced})
 
